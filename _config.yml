@@ -119,6 +119,21 @@ pwa:
 
 paginate: 10
 
+jekyll_compose:
+  default_front_matter:
+    drafts:
+      description:
+      image:
+      category:
+      tags:
+    posts:
+      author: Erik Pillon 
+      euthor_email: f1.analytics.info@gmail.com
+      description:
+      image:
+      category:
+      tags: '2023'
+
 # ------------ The following options are not recommended to be modified ------------------
 
 kramdown:
