@@ -11,7 +11,7 @@ category:
 ---
  
 # Lap times chart
-This plot gives a great immediate insight about the actual race pace and the different tyre degradation that drivers and teams suffered. This plot should be coupled with the plot that we produced for the FP1 and FP2 where was obvious that the RedBulls and the Aston Martin had an astonishing race pace.
+This plot gives a great immediate insight into the actual race pace and the different tire degradation that drivers and teams suffered. This plot should be coupled with the plot that we produced for the FP1 and FP2 where was obvious that the Red Bulls and the Aston Martin had an astonishing race pace.
 
 ![Laps Evolution | Bahrein 2023](/assets/img/laps_time_Bahrein_2023.png)
 _Race pace of Leclerc, Perez, Hamilton and Alonso._ 
@@ -21,11 +21,10 @@ It is immediately noticeable that in the first stint both Alonso and Perez had m
 > Note: Inlap, Outlap and VSC times are not considered.
 
 ## Ferrari 2023 vs. Ferrari 2022
-There has been a lot of talk about Ferrari's setback from 2022. 
-I tried to look at some data, and while data seems to support this thesys, plots needs to be taken _cum grano salis_ (see below).
-Translated with www.DeepL.com/Translator (free version)
+There has been a lot of talk about Ferrari’s setback compared to the 2022 car. I tried to look at some data, and while data seems to support this thesis, plots need to be taken cum grano salis (see below). 
 
-The big Ferrari disappointment is even more striking if we compare 2023 Leclerc's lap time with the 2022 ones.
+The big Ferrari disappointment is even more striking if we compare 2023 Leclerc’s lap times with the 2022 ones.
+
  
 ![Comparison Leclerc 2023 vs 2022](/assets/img/laps_time_comparison_leclerc_Bahrein.png)
 _Comparison lap times Leclerc 2023 (red) vs 2022 (blue)_
@@ -38,7 +37,7 @@ _Comparison lap times Sainz 2023 (red) vs 2022 (blue)_
 
 > Last year there was a Safety car that sensibly let the asphalt cool down, save everyone's tires and charge the battery for the final rush.
 
-We clearly see that the problem of the car is tire degradation. While in 2022 the car was relatively unknown, we already know a lot about the 2023 car. If we consider that the asphalt of Bahrein is the most abrasive of the entire calendar, we can put the Lap Evolution plot of Sainz in perspective. Sainz 2023 car, albeit starting second a third stint with a slower pace, managed to keep a really steady pace, synonim that was actively preserving the tires while compromising his race pace (just for example remember Sainz team radio while compaint "I can't go faster. Tires won't last")
+We clearly see that the problem with the car is tire degradation. While in 2022 the car was relatively unknown, we already know a lot about the 2023 car. If we consider that the asphalt of Bahrein is the most abrasive of the entire calendar, we can put the Lap Evolution plot of Sainz in perspective. Sainz's 2023 car, albeit starting second a third stint with a slower pace, managed to keep a steady pace, a synonym that was actively preserving the tires while compromising his race pace (just for example remember Sainz team radio while complaint “I can’t go faster. Tires won’t last”)
 
 ## Tyre strategy
 ![Alt text](/assets/img/strategy_2023_Bahrein.png)
