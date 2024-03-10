@@ -1,28 +1,31 @@
-class Plotter:
-    """_summary_
-    """
-    
-    def __init__(self, df) -> None:
-        pass
-    
-    def plot(self, df) -> None:
-        plt.fig()
-        pass
-        
+# this script can be improved
+#
+# year should be a parameter
+# race should be a parameter
+# plots and folders should be all together
 
-from IPython.display import display, HTML
-# display(HTML("<style>.container { width:100% !important; }</style>"))
-
-import numpy as np
 import fastf1 as ff1
 from fastf1 import plotting
-from fastf1 import utils
-ff1.Cache.enable_cache('website_cache/')
 from matplotlib import pyplot as plt
-plt.rcParams['figure.dpi'] = 300
+from matplotlib.pyplot import figure
+import numpy as np
+import pandas as pd
+import sys
+import os
 
-year = 2023
-gp = 'Bahrein' 
+# Enable the cache
+ff1.Cache.enable_cache('cache') 
+
+year_ = int(sys.argv[1])
+circuit_ = sys.argv[2]
+
+year = year_
+circuit = circuit_
+
+foldername = f"assets/img/{year}/{circuit}/"
+
+if not os.path.exists(foldername):
+    os.makedirs(foldername)
 
 # Load the session data
 race = ff1.get_session(year, circuit, 'R')
@@ -31,7 +34,6 @@ laps = race.load_laps(with_telemetry=True)
 driver_stints = laps[['Driver', 'Stint', 'Compound', 'LapNumber']].groupby(
     ['Driver', 'Stint', 'Compound']
 ).count().reset_index()
-
 
 driver_stints = driver_stints.rename(columns={'LapNumber': 'StintLength'})
 
@@ -79,6 +81,5 @@ ax.spines['top'].set_visible(False)
 ax.spines['right'].set_visible(False)
 ax.spines['left'].set_visible(False)
 
-plt.savefig(f'strategy_{year}_{gp}.png', dpi=300)
+plt.savefig(f'{foldername}strategy_{circuit}_{year}.png', dpi=300)
 
-plt.show()

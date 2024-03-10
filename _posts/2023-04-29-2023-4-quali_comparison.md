@@ -3,7 +3,7 @@ title: "2023.4 Azerbaijan | Quali Lap Comparison: Leclerc vs Verstappen"
 date: 2023-04-29 15:50 +0100
 tags: ['2023', leclerc, verstappen, baku]     # TAG names should always be lowercase
 categories: [2023 Quali Lap Analysis, Azerbaijan]
-author: Erik Pillon
+author: erik
 author_email: f1.analytics.info@gmail.com
 description:
 image:

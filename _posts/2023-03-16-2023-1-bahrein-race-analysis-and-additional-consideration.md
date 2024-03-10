@@ -3,7 +3,7 @@ title: 2023.1 Bahrein | Race Analysis and Additional consideration
 date: 2023-03-16 22:50 +0100
 tags: ['2023', leclerc, sainz, verstappen, bahrein, alonso, hamilton, russell]     # TAG names should always be lowercase
 categories: [2023 Race Analysis, Bahrein]
-author: Erik Pillon
+author: erik
 euthor_email: f1.analytics.info@gmail.com
 description:
 image:
