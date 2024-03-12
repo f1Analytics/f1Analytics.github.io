@@ -19,3 +19,13 @@ Gemfile.lock
 # npm dependencies
 node_modules
 package-lock.json
+
+# config files
+config.ini
+
+# cache
+data_engine/__pycache__
+
+# images 
+*.png
+images/
