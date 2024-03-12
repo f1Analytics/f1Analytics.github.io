@@ -22,3 +22,6 @@ package-lock.json
 
 # config files
 config.ini
+
+# cache
+data_engine/__pycache__
