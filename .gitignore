@@ -25,7 +25,7 @@ config.ini
 
 # cache
 data_engine/__pycache__
-
+data_engine/cache
 # images 
 *.png
 images/
