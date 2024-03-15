@@ -3,7 +3,7 @@ from fastf1 import plotting
 from fastf1 import utils
 
 import matplotlib.pyplot as plt
-from main import GPBucket
+from data_engine.main import GPBucket
 class Processor:
     def __init__(self, bucket):
         self.bucket: GPBucket = bucket

@@ -1,5 +1,5 @@
 from pathlib import Path
-from fetcher import Fetcher
+# from data_engine.fetcher import Fetcher
 import matplotlib.pyplot as plt
 
 import fastf1 as ff1
@@ -21,7 +21,7 @@ class EngineBucket:
     def __init__(self, gp_id, year):
         self.gp_id = gp_id
         self.year = year
-        self.fetcher = Fetcher()
+        # self.fetcher = Fetcher()
         
 class GPBucket(EngineBucket):
     def __init__(self, gp_id, year):
@@ -40,12 +40,13 @@ class GPBucket(EngineBucket):
     @property
     def processor(self):
         if self._processor is None:
-            from processor import Processor
+            from data_engine.processor import Processor
             self._processor = Processor(bucket=self)
         return self._processor
     
+
     def _set_static_data(self):
-        self.data = self.fetcher.fetch_static_data()
+        # self.data = self.fetcher.fetch_static_data()
         self.gp_name = ""
     
     def _set_gp_info(self):
@@ -53,7 +54,12 @@ class GPBucket(EngineBucket):
         self.quali.load()
         self.race = ff1.get_session(self.year, self.gp_id, 'R')
         self.race.load()
-        
+    
+    def get_drivers(self):
+        drivers = self.race.drivers
+        return (self.race.get_driver(driver)["Abbreviation"] for driver in drivers)
+    
+           
     def get_tyre_strategy_summary(self):
         fig = self.processor.create_tyre_strategy_summary()
         return fig
