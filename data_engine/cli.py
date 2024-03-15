@@ -1,7 +1,7 @@
 from pathlib import Path
 import fire
-from main import GPBucket
-from utils import *
+from data_engine.main import GPBucket
+from data_engine.utils import *
 import matplotlib.pyplot as plt
 import os
 import logging
