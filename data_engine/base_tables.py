@@ -17,48 +17,46 @@ class F1Base(Base):
 
     @classmethod
     def from_df(cls, df):
+        df.columns = map(str.lower, df.columns)
+        for _, row in df.iterrows():
+            cls(**row)
         return [cls(**row) for _, row in df.iterrows()]
 
 
 # Define your SQLAlchemy models
-class GP(F1Base):
-    __tablename__ = "gp"
-    id = Column(Integer, primary_key=True)
-    gp_name = Column(String)
+# class GP(F1Base):
+#     __tablename__ = "gp"
+#     id = Column(Integer, primary_key=True)
+#     gp_name = Column(String)
 
-    lap = relationship("Lap", backref="gp")
-    driver = relationship("Driver", backref="gp")
+#     lap = relationship("Lap", backref="gp")
 
 
 class Lap(F1Base):
-    __tablename__ = "laps"
+    __tablename__ = "lap"
     id = Column(Integer, primary_key=True)
-    gp_id = Column(Integer, ForeignKey("gp.id"))
+    # gp_id = Column(Integer, ForeignKey("gp.id"))
+    driver_id = Column(Integer, ForeignKey("driver.id"))
     lap_number = Column(Integer)
     lap_time = Column(Time)
 
-    driver = relationship("Driver", backref="lap")
+    driver = relationship("Driver", back_populates="lap")
 
 
 class Driver(F1Base):
-    __tablename__ = "child"
+    __tablename__ = "driver"
     id = Column(Integer, primary_key=True)
     name = Column(String)
     abbr = Column(String)
 
-    parent = relationship("Parent", back_populates="children")
+    parent = relationship("Lap", back_populates="driver")
 
 
-class Constructor(F1Base):
-    __tablename__ = "constructor"
-    id = Column(Integer, primary_key=True)
-    name = Column(String)
-    abbreviation = Column(String)
-
-
-def get_data_from_csv():
-    df = pd.read_csv("data.csv")
-    return df
+# class Constructor(F1Base):
+#     __tablename__ = "constructor"
+#     id = Column(Integer, primary_key=True)
+#     name = Column(String)
+#     abbreviation = Column(String)
 
 
 if __name__ == "__main__":
@@ -69,4 +67,4 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    data = get_data_from_csv()
+    # data = get_data_from_csv()
