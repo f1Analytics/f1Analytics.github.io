@@ -33,3 +33,6 @@ data_engine/cache
 # images 
 *.png
 images/
+
+# data 
+*.csv
