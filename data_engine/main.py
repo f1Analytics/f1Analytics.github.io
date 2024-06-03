@@ -69,7 +69,7 @@ class GPBucket(EngineBucket):
         fig = self.processor.create_tyre_strategy_summary()
         return fig
 
-    def get_quali_comparison(self, driver_1, driver_2):
+    def get_quali_comparison(self, driver_1: str, driver_2: str):
         fig = self.processor.create_best_lap_comparison_summary(driver_1, driver_2)
         return fig
 
