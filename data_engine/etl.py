@@ -18,18 +18,6 @@ def get_data_from_excel(filepath="drivers.xlsx"):
     return df
 
 
-class F1Base(Base, ABC):
-    __abstract__ = True
-
-    id = Column(Integer, primary_key=True)
-
-    _identification_keys = []
-
-    @abstractmethod
-    def check_if_it_exists(self):
-        raise NotImplementedError
-
-
 class Driver(Base):
     __tablename__ = "drivers"
 
